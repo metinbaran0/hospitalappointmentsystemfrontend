@@ -1,0 +1,304 @@
+/* Genel Register Stil */
+.register {
+    position: absolute;
+    top: 0;
+    right: 0; /* Ekranın sağ tarafına alındı */
+    height: 100%;
+    width: 50%; /* Genişliği %50 yaparak ekranın sağ tarafını doldurur */
+    background-color: rgb(12, 177, 21) !important;
+    z-index: 0;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  /* Form kısmı */
+  .register form {
+    background: #fff; /* Beyaz arka plan */
+    display: flex;
+  
+  }
+  
+  /* Giriş kutuları */
+  input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="date"] {
+    background-color: #1a2226;
+    border: none;
+    border-bottom: 2px solid #0db8de;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #ecf0f5;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  input[type="date"]:focus {
+    background-color: #d4edda !important; /* Açık yeşil */
+    color: #155724 !important; /* Yazı rengini koyu yeşil yap */
+    border-bottom: 2px solid #28a745 !important; /* Alt çizgiyi yeşil yap */
+  }
+  
+  /* Giriş kutusunun genel stili */
+  .form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #0db8de;
+    outline: 0;
+    background-color: #1a2226;
+    color: #a2a4a4;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+  }
+  
+  /* Giriş kutularını kapsayan alan */
+  .col-6 {
+    width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px rgba(32, 7, 7, 0.05); /* Hafif gölge efekti */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20px; /* Sola kaydırma */
+    top: 10px; /* Yukarı kaydırma */
+    margin-left: 50px;  /* 50px sağa kaydırma */
+  }
+  
+  /* Başlık stili */
+  .h1 {
+    margin-left: 200px; /* sağa kaydırma */
+    font-weight: bold; /* Harfleri koyulaştırma */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleme */
+    color: #ecf0f5;
+    letter-spacing: 2px;
+  }
+  
+  /* Giriş kutusu stil */
+  .register input[type="text"], 
+  .register input[type="password"], 
+  .register input[type="tel"], 
+  .register input[type="email"], 
+  .register input[type="date"] {
+    background: rgb(12, 177, 21) !important; /* Arka planı yeşil yap */
+    padding: 10px 15px;
+    margin: 7px 0;
+    width: 100%;
+    height: 40px;
+    border: none; /* Kenarlıkları kaldır */
+    border-bottom: 2px solid white; /* Alt çizgi ekle */
+    outline: none;
+    color: white; /* Yazı rengini beyaz yap */
+  }
+  
+  .register input[type="text"]:focus,
+  .register input[type="password"]:focus,
+  .register input[type="tel"]:focus,
+  .register input[type="email"]:focus,
+  .register input[type="date"]:focus {
+    background: rgb(12, 177, 21) !important;
+    border-bottom: 2px solid white !important; 
+    outline: none !important;
+    color: white !important; 
+    box-shadow: none !important;
+  }
+  
+  .register input[type="text"]:hover, 
+  .register input[type="password"]:hover, 
+  .register input[type="tel"]:hover, 
+  .register input[type="email"]:hover, 
+  .register input[type="date"]:hover {
+    background: rgb(12, 177, 21) !important;
+    color: white !important; /* Yazı rengini beyaz tut */
+    box-shadow: none !important; /* Titremeyi engellemek için */
+    border-bottom: 2px solid white; /* Alt çizgi sabit kalacak */
+  }
+  
+  
+  /* Cinsiyet Seçimi Alanı */
+  .register select {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: none; /* Kenarlıkları kaldır */
+    border-bottom: 2px solid white; /* Sadece alt kısma beyaz çizgi ekle */
+    background-color: rgb(12, 177, 21); /* Yeşil arka plan */
+    color: white; /* Beyaz yazı rengi */
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* Seçeneklerin görünümü */
+  .register select option {
+    background-color: white; /* Açılır menü arka planı */
+    color: black; /* Seçeneklerin rengi */
+  }
+  
+  /* Hover ve Focus Efekti */
+  .register select:hover,
+  .register select:focus {
+    border-bottom: 2px solid #28a745; /* Yeşil alt çizgi */
+    background-color: rgb(15, 150, 25); /* Daha koyu yeşil */
+  }
+  
+  /* Buton Stili */
+  .custom-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #588663; /* Yeşil renk */
+    border: none;
+    border-radius: 50px; /* Yuvarlak köşeler */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase; /* Yazıyı büyük harf yap */
+  }
+  
+  /* Buton Hover Efekti */
+  .custom-button:hover {
+    background-color: #218838; /* Daha koyu yeşil */
+    transform: scale(1.05); /* Butonu hafif büyüt */
+  }
+  
+  /* Butona Tıklandığında */
+  .custom-button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+  }
+  
+  /* Yükleme Durumunda (Disable) */
+  .custom-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  
+  /* Placeholder stili */
+  .register ::placeholder {
+    color: white !important; /* Placeholder yazı rengini beyaz yap */
+    opacity: 1; /* Görünürlüğünü tam yap */
+  }
+  
+  /* Sosyal Butonlar */
+  .register .social-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .register .social-container .social {
+    margin-right: 15px;
+    font-size: 36px;
+    transition: transform 0.3s ease;
+  }
+  
+  .register .social-container .social i:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Link Stili */
+  .register a {
+    color: #053796;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px 0;
+  }
+  
+  .register a:hover {
+    color: #0651f3;
+  }
+  
+  /* Parola giriş alanlarını kapsayan grup */
+  .input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: rgb(12, 177, 21); /* Arka plan yeşil */
+    border-radius: 8px;
+    padding: 5px;
+    position: relative;
+  }
+  
+  /* Parola giriş kutusu */
+  .input-group .form-control {
+    background: transparent; /* Şeffaf arka plan */
+    border: none; /* Kenarlıkları kaldır */
+    color: white; /* Yazı rengi beyaz */
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    padding-right: 40px; /* Göz ikonunun içeri kaymasını önler */
+  }
+  
+  /* Placeholder yazı rengi */
+  .input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Beyaz ama hafif soluk */
+  }
+  
+  /* Göz ikonu her zaman sağda görünsün */
+  .input-group .btn {
+    background: none;
+    border: none;
+    color: white; /* İkonun rengi beyaz */
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    right: 10px; /* Sağ tarafa hizalama */
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible !important;
+  }
+  /* Göz butonu hover efekti */
+  .input-group .btn:hover {
+    color: #d4edda; /* Açık yeşil */
+  }
+  
+  /* Bootstrap ikonlarını özelleştirme */
+  .input-group .bi {
+    font-size: 20px; /* İkon boyutu */
+  }
+  /* Göz ikonu, input alanına tıklanmasıyla kaybolmamalıdır */
+  .input-group .form-control:focus {
+    outline: none;
+    border-color: transparent; /* Focus olduğunda kenarlık kaybolur */
+  }
+  /* Göz ikonu, input alanına tıklanmasıyla kaybolmamalıdır */
+  .input-group .form-control:focus + .btn {
+    visibility: visible !important;
+    display: inline-flex; /* Göz ikonu her zaman görünür olacak */
+  }
+  
+  
+  .col-4 {
+    width: 500px;
+    height: 50px;
+    background: rgb(12, 177, 21) !important;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px rgba(32, 7, 7, 0.05); /* Hafif gölge efekti */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 20px; /* Sola kaydırır */
+    margin-top: 50px;
+    margin-left: 10px; /* 50px sağa kaydırır */
+  
+  }

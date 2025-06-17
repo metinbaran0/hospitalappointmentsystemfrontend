@@ -1,0 +1,254 @@
+
+/* Genel Stil */
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw; /* Sayfa yüksekliği ekranın tamamını kapsar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #343a47 0%, #b7d6ff 100%); /* Açık renk geçişi */
+    font-family: "Roboto", sans-serif;
+  
+  }
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw; /* Genişlik tam ekran olmalı */
+    height: 40vh; /* Yükseklik tam ekran olmalı */
+    justify-content: center; /* Yüksekliği baştan sona düzenle */
+    padding-bottom: 0;
+    margin-bottom: 120px;
+   
+  }
+  .body-container, .container {
+    height: 100vh; /* Tam ekran olacak şekilde */
+  }
+  
+  
+  .left, .right {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .left {
+    background-color: lightgreen;
+  }
+  
+  .right {
+    background-color: lightpink;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%; /* Alt kısım tam ekran olacak */
+  
+  }
+  
+  button.ghost {
+    width: 50%;
+    color: rgb(35, 52, 63);
+    background: #869cb1; /* Gri renk */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 1px solid #004466;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  button.ghost:hover {
+    background-color: #A9A9A9; /* Gri tonunda hover efekti */
+    font-size: revert;
+  }
+  
+  
+  
+  
+  
+  input, button.ghost  {
+    width: 60%; /* Genişlik %100 olacak */
+    padding: 12px; /* Gerekli iç boşluk */
+    margin: 5px 0; /* Dikey boşluk */
+    box-sizing: border-box; /* Padding ve border hesaplamayı içine alır */
+  }
+  
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 60px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  
+  .overlay-left img, .overlay-right img {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f4f8;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px;
+  }
+  
+  .top-button.ghost -box {
+    width: 20;
+    height: 20;
+    position: relative;
+   
+    border-radius: 100px;
+    background: #4dc3ff;
+    margin: 3px 0px 0.5px 0px;
+  }
+  
+  
+  
+  
+  
+  .container {
+    position: relative;
+    width: 100%; /* Genişlik %100 olacak */
+    height: 100vh; /* Yükseklik %100 olacak */
+    background-color:  rgb(12, 177, 21);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .form-container {
+    width: 100vw; /* Genişlik %100 olacak */
+    height: 100vh; /* Yükseklik %100 olacak */
+    display: flex;
+    flex-direction: row;  /* İçeriği dikey hizala */
+    justify-content: center; 
+    align-items: stretch; /* Tam genişlikte */
+    overflow: hidden; /* İçerik taşarsa gizle */
+    box-sizing: border-box;  /* Padding hesaplamayı içine alır */
+    
+  }
+  
+  .form-left, .form-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* İçeriği dikeyde ortalar */
+    height: 100%; /* Yüksekliği %100 yap */
+    padding: 2px;
+    width: 50%;
+    
+  }
+  
+  .form-left {
+    width: 50%; /* Sol taraf ekranın yarısını kaplasın */
+    height: 100%; /* Yükseklik %100 olacak */
+    padding: 1px;
+    background: linear-gradient(135deg, #a8c0ff 0%, #b7d6ff 100%); /* Açık renk geçişi */
+  }
+  
+  .form-right {
+    width: 50%; /* Sağ taraf ekranın yarısını kaplasın */
+    height: 100%; /* Yükseklik %100 olacak */
+    padding: 1px;
+    background-color: #fafafa; /* Sağ tarafın arka plan rengi */
+   
+  }
+  
+  
+  
+  form {
+    width: 100%; /* Form genişliği %100 olacak */
+    height: 100%;
+    display: flex; /* Flexbox düzeni */
+    flex-direction: column; /* Form elemanlarını dikey hizala */
+    gap: 20px; /* Form elemanları arasına boşluk ekle */
+    align-items: center; /* Yatayda ortala */
+  }
+  .col-12 {
+    width: 100%; /* Kolon genişliği %100 olacak */
+    height: 100%;
+  }
+  
+  
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  
+  .overlay {
+    position: relative;
+    color: #fff;
+    background: linear-gradient(to right, #3d82ae, #66ccff);
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlay-left, .overlay-right {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlay-left {
+    transform: translateX(-20%);
+  }
+  
+  .overlay-right {
+    right: 0;
+    transform: translateX(0); /* Sağdaki paneli biraz sola kaydır */
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+  
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+  
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+  

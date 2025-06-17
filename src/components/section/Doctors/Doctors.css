@@ -1,0 +1,247 @@
+.doctors-carousel {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+    height: 600px;
+    margin: 0;
+  }
+  
+  .carousel-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    transform: translateX(120px);
+    margin-left: -150px;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .section-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .section-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .carousel-track {
+    position: relative;
+    overflow: visible;
+    width: 1250px;
+    height: 400px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    display: none;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .carousel-item.active-center {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-220px);
+    z-index: 3;
+    background: linear-gradient(135deg, #e6f3ff, #f0f8ff);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  .carousel-item.active {
+    display: block;
+    opacity: 0.8;
+    visibility: visible;
+    transform: translateX(180px);
+    z-index: 2;
+  }
+  
+  .carousel-item.cloned.active {
+    display: block;
+    opacity: 0.8;
+    visibility: visible;
+    transform: translateX(-620px);
+    z-index: 2;
+  }
+  
+  .doctor-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .doctor-image{
+    width: 100px !important; /* Daha büyük bir boyut belirleyin */
+    height: 100px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #e6f3ff;
+    display: block; /* Eğer inline olarak algılanıyorsa düzeltilir */
+  }
+  
+  .doctor-info {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .doctor-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .specialty {
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .book-appointment {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .book-appointment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 4;
+    margin-left: 400px;
+    margin-top: 20px;
+  }
+  
+  .slider-prev,
+  .slider-next {
+    background: var(--primary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider-prev:hover,
+  .slider-next:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+  }
+  
+  .nav-icon {
+    font-size: 24px;
+    color: white !important;
+  }
+  
+  @media (max-width: 1200px) {
+    .carousel-container {
+      transform: translateX(0);
+    }
+  
+    .carousel-item {
+      width: 350px;
+      height: 320px;
+    }
+  
+    .carousel-item.active-center {
+      transform: translateX(-180px);
+    }
+  
+    .carousel-item.active {
+      transform: translateX(150px);
+    }
+  
+    .carousel-item.cloned.active {
+      transform: translateX(-510px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .doctors-carousel {
+      height: 500px;
+    }
+  
+    .carousel-item {
+      width: 280px;
+      height: 300px;
+    }
+  
+    .carousel-item.active-center {
+      transform: translateX(-140px);
+    }
+  
+    .carousel-item.active {
+      transform: translateX(120px);
+    }
+  
+    .carousel-item.cloned.active {
+      transform: translateX(-400px);
+    }
+  
+    .doctor-card img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .slider-prev,
+    .slider-next {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .nav-icon {
+      font-size: 20px;
+    }
+  }

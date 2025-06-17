@@ -1,0 +1,269 @@
+.log-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  width: 50%;
+  z-index: 1;
+  background-color: rgb(12, 177, 21) !important;
+
+}
+
+/* Form kısmı */
+.log-in form {
+  background: #fff; /* Beyaz arka plan */
+  display: flex;
+
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px;
+  height: 100%;
+  text-align: center;
+  width: 100%; /* Genişliği tam yap */
+}
+input[type="text"] {
+  background-color: #1a2226;
+  border: none;
+  border-bottom: 2px solid #0db8de;
+  border-top: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  outline: 0;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  color: #ecf0f5;
+}
+
+input[type="password"] {
+  background-color: #1a2226;
+  border: none;
+  border-bottom: 2px solid #0db8de;
+  border-top: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  outline: 0;
+  padding-left: 0px;
+  margin-bottom: 20px;
+  color: #ecf0f5;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #d4edda !important; /* Açık yeşil */
+  color: #155724 !important; /* Yazı rengini koyu yeşil yap */
+  border-bottom: 2px solid #28a745 !important; /* Alt çizgiyi yeşil yap */
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 2px solid #0db8de;
+  outline: 0;
+  background-color: #1a2226;
+  color: #a2a4a4;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0;
+}
+
+/* Giriş kutularını kapsayan alan */
+.col-6 {
+  width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px rgb(12, 177, 21);  /* Hafif gölge efekti */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 20px; /* Sola kaydırır */
+  top: 10px; /* Yukarı kaydırır */
+  margin-left: 50px;  /* 50px sağa kaydırır */
+}
+.col-4 {
+  width: 500px;
+  height: 50px;
+  background: rgb(12, 177, 21) !important;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px rgb(12, 177, 21);  /* Hafif gölge efekti */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50px; /* Sola kaydırır */
+  margin-top: 50px;
+  margin-left: 10px; /* 50px sağa kaydırır */
+
+}
+
+
+/* Başlık stili */
+.h1 {
+  margin-left: 200px; /* sağa kaydırır */
+  font-weight: bold; /* Harfleri koyulaştırır */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge ekler */
+  color: #ecf0f5;
+  letter-spacing: 2px;
+}
+
+/* Giriş kutusu stil */
+.log-in input {
+  background: rgb(12, 177, 21);
+  padding: 10px 15px;
+  margin: 7px 0;
+  width: 100%;
+  height: 40px;
+  border: none; /* Kenarlıkları kaldır */
+  border-bottom: 2px solid white; /* Alt çizgi ekle */
+  outline: none;
+  color: white; /* Yazı rengini beyaz yap */
+}
+
+
+.log-in input:focus {
+  /* mouse üzerine tıklandığında*/
+  background: rgb(12, 177, 21) !important;
+  border-bottom: 2px solid white !important; /* Alt çizgi ekle */
+  outline: none !important;
+  color: white !important; /* Yazı rengini beyaz tut */
+  box-shadow: none !important; /* Gölgelenmeyi kaldır */
+
+}
+.log-in input:hover {
+  /* mouse üzerine geldiğinde*/
+  background: rgb(12, 177, 21) !important;
+  color: white !important; /* Yazı rengini beyaz tut */
+  box-shadow: none !important; /* Titremeyi engellemek için */
+  border-bottom: 2px solid white; /* Alt çizgi sabit kalacak */
+
+}
+::placeholder {
+  color: white !important; /* Placeholder yazı rengini beyaz yap */
+  opacity: 1; /* Görünürlüğünü tam yap */
+}
+
+
+/* Buton Stili */
+.custom-button {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #588663; /* Yeşil renk */
+  border: none;
+  border-radius: 50px; /* Yuvarlak köşeler */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase; /* Yazıyı büyük harf yap */
+}
+
+/* Buton Hover Efekti */
+.custom-button:hover {
+  background-color: #218838; /* Daha koyu yeşil */
+  transform: scale(1.05); /* Butonu hafif büyüt */
+}
+
+/* Butona Tıklandığında */
+.custom-button:active {
+  background-color: #1e7e34;
+  transform: scale(0.98);
+}
+
+/* Yükleme Durumunda (Disable) */
+.custom-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.social-container a {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+/* Sosyal Butonlar */
+.log-in .social-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.log-in .social-container .social {
+  margin-right: 15px;
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.log-in .social-container .social i:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+
+
+  .form-left, .form-right {
+    right: 100%; /* Her iki formun da genişliği 100% olacak */
+  }
+
+
+
+  .social-container {
+    flex-direction: column; /* Sosyal ikonları dikeyde hizala */
+  }
+
+  .social-container .social {
+    margin-bottom: 15px; /* Sosyal ikonlar arasında boşluk ekle */
+  }
+}
+
+/* Link Stili */
+.log-in a {
+  color: #053796;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.log-in a:hover {
+  color: #0651f3;
+}
+
+/* Stilize Edilmiş Butonlar */
+.method-button {
+  background-color: #588663; /* Varsayılan yeşil renk */
+  color: white !important;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px; /* Butonlar arası boşluk */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.method-button:hover {
+  background-color: #218838; /* Koyu yeşil */
+}
+
+.method-button.btn-outline-primary {
+  background-color: transparent; /* Şeffaf arka plan */
+  color: #588663; /* Yazı rengi yeşil */
+  border: none; /* Kenarlık rengi yeşil */
+}
+
+.method-button.btn-outline-primary:hover {
+  background-color: #d4edda; /* Açık yeşil */
+  color: #588663;
+  border-color: #28a745;
+}

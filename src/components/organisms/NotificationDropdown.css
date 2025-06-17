@@ -1,0 +1,220 @@
+/* ===================== Temel Konteyner ===================== */
+.notification-dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* ===================== Buton & Badge ===================== */
+  .notification-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: #FFD700;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+  
+  /* ===================== Dropdown Menü ===================== */
+  .notification-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 400px;
+    max-height: 70vh;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    transform-origin: top right;
+  }
+  
+  /* ===================== Animasyonlar ===================== */
+  .dropdown-enter {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+  
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: opacity 200ms, transform 200ms;
+  }
+  
+  .dropdown-exit {
+    opacity: 1;
+  }
+  
+  .dropdown-exit-active {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+    transition: opacity 200ms, transform 200ms;
+  }
+  
+  /* ===================== Header ===================== */
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .notification-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .mark-all-read, .view-all {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .mark-all-read:hover, .view-all:hover {
+    color: #007bff;
+  }
+  
+  /* ===================== Bildirim Listesi ===================== */
+  .notification-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 4px;
+  }
+  
+  /* ===================== Bildirim Item ===================== */
+  .notification-item {
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+  }
+  
+  .notification-item.unread {
+    background: #f8fbff;
+    border-left: 3px solid #2196f3;
+  }
+  
+  .notification-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===================== Sil Butonu ===================== */
+  .delete-button {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+  }
+  
+  .notification-item:hover .delete-button {
+    opacity: 1;
+  }
+  
+  /* ===================== Diğer Durumlar ===================== */
+  .empty, .loading, .error-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+  
+  /* ===================== Sayfalama ===================== */
+  .notification-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .dropdown-menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 0.5rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 180px;
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  
+  .dropdown-menu button:hover {
+    background-color: #62a7e7;
+  }
+  
+  .notification-pagination button {
+    border: none;  /* Buton etrafındaki çizgiyi kaldırır */
+    outline: none;
+    background: none;
+    
+  }
+  .notification-pagination button:hover {
+    color: #2c9ce7;
+    
+  }

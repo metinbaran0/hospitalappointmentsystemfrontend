@@ -1,0 +1,204 @@
+/* GENEL REGISTER STIL */
+.register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: rgb(12, 177, 21);
+  z-index: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+/* ÖZEL ALANLAR İÇİN CSS (First Name, Last Name, Phone Number, Email) */
+.register input[name="firstName"],
+.register input[name="lastName"], 
+.register input[name="phoneNumber"],
+.register input[name="email"] {
+  background-color: rgb(12, 177, 21) !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: 2px solid white !important;
+}
+
+/* BU ALANLARA YAZI YAZARKEN (FOCUS DURUMU) */
+.register input[name="firstName"]:focus,
+.register input[name="lastName"]:focus,
+.register input[name="phoneNumber"]:focus,
+.register input[name="email"]:focus,
+.register input[name="firstName"]:not(:placeholder-shown),
+.register input[name="lastName"]:not(:placeholder-shown),
+.register input[name="phoneNumber"]:not(:placeholder-shown),
+.register input[name="email"]:not(:placeholder-shown) {
+  background-color: rgb(12, 177, 21) !important;
+  color: white !important;
+  border-bottom: 2px solid white !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* TÜM INPUT ALANLARI İÇİN KESİN ÇÖZÜM */
+.register input[type="text"],
+.register input[type="password"], 
+.register input[type="tel"],
+.register input[type="email"],
+.register input[type="date"],
+.register select,
+.input-group .form-control {
+  background-color: rgb(12, 177, 21) !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: 2px solid white !important;
+  border-radius: 0 !important;
+  padding: 10px 15px !important;
+  margin: 7px 0 !important;
+  width: 100% !important;
+  height: 40px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: bold !important;
+}
+
+/* FOCUS VE HOVER DURUMLARINDA */
+.register input[type="text"]:focus,
+.register input[type="password"]:focus,
+.register input[type="tel"]:focus,
+.register input[type="email"]:focus,
+.register input[type="date"]:focus,
+.register select:focus,
+.input-group .form-control:focus,
+.register input[type="text"]:hover, 
+.register input[type="password"]:hover, 
+.register input[type="tel"]:hover, 
+.register input[type="email"]:hover, 
+.register input[type="date"]:hover,
+.register select:hover,
+.input-group .form-control:hover {
+  background-color: rgb(12, 177, 21) !important;
+  color: white !important;
+  border-bottom: 2px solid white !important;
+  outline: none !important;
+}
+
+/* OTOMATİK TAMAMLAMA (AUTOFILL) STIL DÜZELTMESİ */
+.register input:-webkit-autofill,
+.register input:-webkit-autofill:hover, 
+.register input:-webkit-autofill:focus,
+.register input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgb(12, 177, 21) inset !important;
+  -webkit-text-fill-color: white !important;
+  border-bottom: 2px solid white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ÖZELLİKLE BELİRTİLEN ALANLAR İÇİN */
+.register input[name="firstName"]:-webkit-autofill,
+.register input[name="lastName"]:-webkit-autofill,
+.register input[name="phoneNumber"]:-webkit-autofill,
+.register input[name="email"]:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(12, 177, 21) inset !important;
+  -webkit-text-fill-color: white !important;
+  border-bottom: 2px solid white !important;
+}
+
+/* FIREFOX İÇİN */
+.register input:-moz-autofill,
+.register input:-moz-autofill:hover,
+.register input:-moz-autofill:focus {
+  filter: none;
+  background-color: rgb(12, 177, 21) !important;
+  color: white !important;
+  border-bottom: 2px solid white !important;
+}
+
+/* PLACEHOLDER STİLİ */
+.register ::placeholder,
+.input-group .form-control::placeholder,
+.register input[name="firstName"]::placeholder,
+.register input[name="lastName"]::placeholder,
+.register input[name="phoneNumber"]::placeholder,
+.register input[name="email"]::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* SELECT KUTUSU ÖZEL STİL */
+.register select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 10px center !important;
+  background-size: 20px !important;
+  padding-right: 30px !important;
+  color: white !important;
+}
+
+/* SELECT OPTION STİLİ */
+.register select option {
+  background: rgb(8, 226, 19);
+  color: black;
+}
+
+/* DİĞER STİLLER */
+.col-6 {
+  width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  margin-left: 50px;
+  background-color: rgb(12, 177, 21) !important;
+}
+
+.h1 {
+  margin-left: 200px;
+  font-weight: bold;
+  color: #ecf0f5;
+}
+
+.custom-button {
+  width: 100%;
+  padding: 12px 20px;
+  color: white;
+  background-color: #588663;
+  border: none;
+  border-radius: 50px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: rgb(12, 177, 21);
+  position: relative;
+}
+
+/* PAROLA GİRİŞ ALANLARINI KAPSAYAN GRUP */
+.input-group .form-control {
+  background: transparent !important;
+  color: white !important;
+  padding-right: 40px !important;
+}
+
+/* GÖZ İKONU */
+.input-group .btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

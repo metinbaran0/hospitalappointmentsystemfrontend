@@ -1,0 +1,74 @@
+.hero-section {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                      url('https://www.w3schools.com/w3images/doctor.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 70px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s;
+  }
+  
+  .cta-button {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.4s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    background: #28a745;
+    box-shadow: 0 4px 15px rgba(50, 205, 50, 0.3);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .cta-button {
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+    }
+  }
